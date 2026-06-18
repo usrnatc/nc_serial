@@ -44,8 +44,9 @@ header:
 
 All other files that need the API include the header without the define.
 
-To confine all symbols to a single translation unit, `NCSERIAL_STATIC` can be
-defined alongside `NCSERIAL_IMPLEMENTATION`.
+> [!TIP]
+> To confine all symbols to a single translation unit, `NCSERIAL_STATIC` can be
+> defined alongside `NCSERIAL_IMPLEMENTATION`.
 
 ### Overrides
 
