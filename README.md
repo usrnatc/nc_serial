@@ -90,14 +90,22 @@ endian variant.
 ```c++
 nc_serial_write_u8 (&s, value);
 nc_serial_write_i8 (&s, value);
-nc_serial_write_u16_le(&s, value);   nc_serial_write_u16_be(&s, value);
-nc_serial_write_i16_le(&s, value);   nc_serial_write_i16_be(&s, value);
-nc_serial_write_u32_le(&s, value);   nc_serial_write_u32_be(&s, value);
-nc_serial_write_i32_le(&s, value);   nc_serial_write_i32_be(&s, value);
-nc_serial_write_u64_le(&s, value);   nc_serial_write_u64_be(&s, value);
-nc_serial_write_i64_le(&s, value);   nc_serial_write_i64_be(&s, value);
-nc_serial_write_f32_le(&s, value);   nc_serial_write_f32_be(&s, value);
-nc_serial_write_f64_le(&s, value);   nc_serial_write_f64_be(&s, value);
+nc_serial_write_u16_le(&s, value);
+nc_serial_write_u16_be(&s, value);
+nc_serial_write_i16_le(&s, value);
+nc_serial_write_i16_be(&s, value);
+nc_serial_write_u32_le(&s, value);
+nc_serial_write_u32_be(&s, value);
+nc_serial_write_i32_le(&s, value);
+nc_serial_write_i32_be(&s, value);
+nc_serial_write_u64_le(&s, value);
+nc_serial_write_u64_be(&s, value);
+nc_serial_write_i64_le(&s, value);
+nc_serial_write_i64_be(&s, value);
+nc_serial_write_f32_le(&s, value);
+nc_serial_write_f32_be(&s, value);
+nc_serial_write_f64_le(&s, value);
+nc_serial_write_f64_be(&s, value);
 ```
 
 ### Reading
@@ -108,11 +116,16 @@ destination so a short read never hands back uninitialised memory.
 
 ```c++
 nc_serial_read_u8 (&s, &value);
-nc_serial_read_u16_le(&s, &value);   nc_serial_read_u16_be(&s, &value);
-nc_serial_read_u32_le(&s, &value);   nc_serial_read_u32_be(&s, &value);
-nc_serial_read_u64_le(&s, &value);   nc_serial_read_u64_be(&s, &value);
-nc_serial_read_f32_le(&s, &value);   nc_serial_read_f32_be(&s, &value);
-nc_serial_read_f64_le(&s, &value);   nc_serial_read_f64_be(&s, &value);
+nc_serial_read_u16_le(&s, &value);
+nc_serial_read_u16_be(&s, &value);
+nc_serial_read_u32_le(&s, &value);
+nc_serial_read_u32_be(&s, &value);
+nc_serial_read_u64_le(&s, &value);
+nc_serial_read_u64_be(&s, &value);
+nc_serial_read_f32_le(&s, &value);
+nc_serial_read_f32_be(&s, &value);
+nc_serial_read_f64_le(&s, &value);
+nc_serial_read_f64_be(&s, &value);
 // ...and the matching i8 / i16 / i32 / i64 readers
 ```
 
@@ -238,11 +251,16 @@ printf("\n");
 foo Out = {};
 
 s.Position = 0;
-nc_serial_read_u8 (&s, &Out.U8);   nc_serial_read_i8 (&s, &Out.I8);
-nc_serial_read_u16_le(&s, &Out.U16); nc_serial_read_i16_le(&s, &Out.I16);
-nc_serial_read_u32_le(&s, &Out.U32); nc_serial_read_i32_le(&s, &Out.I32);
-nc_serial_read_u64_le(&s, &Out.U64); nc_serial_read_i64_le(&s, &Out.I64);
-nc_serial_read_f32_le(&s, &Out.F32); nc_serial_read_f64_le(&s, &Out.F64);
+nc_serial_read_u8 (&s, &Out.U8);
+nc_serial_read_i8 (&s, &Out.I8);
+nc_serial_read_u16_le(&s, &Out.U16);
+nc_serial_read_i16_le(&s, &Out.I16);
+nc_serial_read_u32_le(&s, &Out.U32);
+nc_serial_read_i32_le(&s, &Out.I32);
+nc_serial_read_u64_le(&s, &Out.U64);
+nc_serial_read_i64_le(&s, &Out.I64);
+nc_serial_read_f32_le(&s, &Out.F32);
+nc_serial_read_f64_le(&s, &Out.F64);
 ```
 
 ```txt
